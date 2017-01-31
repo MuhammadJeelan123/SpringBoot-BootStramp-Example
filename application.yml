@@ -1,0 +1,7 @@
+---
+applications:
+- name: MuhammadJeelan
+  memory: 512M
+  instances: 1
+  path: target/Beta-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
