@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html> 
+<html>
   <head lang="en">
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -9,7 +9,53 @@
 
     <!-- Bootstrap -->
    <link rel='stylesheet' href='webjars/bootstrap/3.2.0/css/bootstrap.min.css'/>
-
+   <link rel='stylesheet' href='/static/main.css'/>
+   <style>
+   #topContainer {
+	background-image:url('/static/sky.jpeg');
+	height:400px;
+	width:100%;
+	background-size:cover;
+	
+}
+.navbar-brand {
+font-size:1.8em;
+}
+#topRow {
+margin-top:100px;
+text-align:center;
+}
+#topRow h1 {
+font-size:300%;
+}
+#emailSignup {
+margin-top:50px;
+}
+.bold {
+font-weight:bold;
+}
+.marginTop {
+margin-top:30px;
+}
+.center {
+text-align:center;
+}
+.title {
+margin-top:100px;
+font-size:300%;
+}
+#footer {
+background-color:#B0D1FB;
+padding-top:70px;
+width:100%;
+}
+.marginBottom {
+margin-bottom:30px;
+}
+.appstoreImage {
+width:250px;
+}
+   </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,51 +65,72 @@
     <script type="text/javascript" src="webjars/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </head>
-  <body>
-<div class="navbar navbar-inverse">
+  <body data-spy="scroll" data-target=".navbar-collapse">
+<div class="navbar navbar-inverse navbar-fixed-top">
 <div class="container">
-<div class="navbar-header"><a class="navbar-brand" href="#">Welcome To Muhammad Jeelan Website</a>
+<div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 <span class="sr-only">Toggle Navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
+<a class="navbar-brand"> Muhammad Jeelan</a>
 </div>
 <div class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
-<li class="active"><a href="">Home</a></li>
-<li><a href="">Profile</a></li>
-<li><a href="">Games</a></li>
-<li><a href="">FeedBack</a></li>
+<li class="active"><a href="#topContainer">Home</a></li>
+<li><a href="#profile">Profile</a></li>
+<li><a href="#technology">Technology</a></li>
+<li><a href="#feedback">FeedBack</a></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="container">
-
-<h1>Muhammad Jeelan Personal Website</h1>
-<form>
+<form class="navbar-form  navbar-right">
 <div class="form-group">
-<label for="username">Username</label>
-<input type="text" name="username" class="form-control"/>
-<label for="password">Password</label>
-<input type="password" name="password" class="form-control"/>
-<div class="checkbox">
-<label>
-<input type="checkbox"/>Keep me logged in
-</label>
+<input type="text" placeholder="email" class="form-control"/>
 </div>
 <div class="form-group">
-<input type="submit" value="LogIn" class="btn btn-default"/>
+<input type="password" placeholder="password" class="form-control"/>	
 </div>
+<div class="form-group">
+<button class="btn btn-success">Log In</button>
 </div>
 </form>
-
 </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</div>
+</div>
+<div class="coantianer contentContainer marginBottom" id="topContainer">
+<div class="row">
+<div class="col-md-6 col-mod-offset-3" id="topRow">
+<h1 class="marginTop"> Muhammad Jeelan</h1>
+<p class="lead"> Welcome to Muhammad Jeelan World</p>
+<p class="bold marginTop"> Passionate about learning different technologies.</p>
+<form class="marginTop">
+<div class="input-group ">
+<span class="input-group-addon">@</span>
+<input type="email" class="form-control" placeholder="Your email"/>
+</div>
+<input type="submit" class="btn btn-success btn-lg marginTop"/>
+</form>
+</div>
+</div>
+</div>
+
+<div class="container contentContainer marginBottom" id="profile">
+
+<div class="row center">
+	<h1 class="center title">Full Stack Developer</h1>
+</div>
+</div>
+<div class="container contentContainer" id="technology">
+<div class="row">
+<h1 class="center title">Download The App!</h1>
+</div>
+</div>	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    $('#contentContainer').css("min-height",$(window).height());
+    </script>
   </body>
 </html>
